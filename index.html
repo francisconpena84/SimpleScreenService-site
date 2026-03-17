@@ -69,150 +69,88 @@
   }
   </script>
 
-  <!-- ✅ Service Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Service",
-        "serviceType": "Screen Enclosure Repair",
-        "provider": {
-          "@type": "HomeAndConstructionBusiness",
-          "name": "Simple Screen Service",
-          "telephone": "+1-407-405-5790",
-          "url": "https://www.simplescreenservice.com/",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "St. Cloud",
-            "addressRegion": "FL",
-            "postalCode": "34772",
-            "addressCountry": "US"
-          }
-        },
-        "areaServed": {
-          "@type": "Place",
-          "name": "Central Florida"
-        },
-        "description": "Professional screen enclosure repair in Orlando, Clermont, Winter Park, Windermere, Winter Garden, Sarasota, Cape Coral, and surrounding areas."
-      },
-      {
-        "@type": "Service",
-        "serviceType": "Patio Screen Installation & Repair",
-        "provider": {
-          "@type": "HomeAndConstructionBusiness",
-          "name": "Simple Screen Service",
-          "telephone": "+1-407-405-5790",
-          "url": "https://www.simplescreenservice.com/"
-        },
-        "areaServed": {
-          "@type": "Place",
-          "name": "Central Florida"
-        },
-        "description": "Luxury patio screen installation and repair for bug-free, modern outdoor spaces across Central Florida."
-      },
-      {
-        "@type": "Service",
-        "serviceType": "Pool Cage Re-Screening",
-        "provider": {
-          "@type": "HomeAndConstructionBusiness",
-          "name": "Simple Screen Service",
-          "telephone": "+1-407-405-5790",
-          "url": "https://www.simplescreenservice.com/"
-        },
-        "areaServed": {
-          "@type": "Place",
-          "name": "Central Florida"
-        },
-        "description": "Complete pool cage re-screening services to restore safety, appearance, and clear views across Central Florida."
-      },
-      {
-        "@type": "Service",
-        "serviceType": "Aluminum Structure Repair",
-        "provider": {
-          "@type": "HomeAndConstructionBusiness",
-          "name": "Simple Screen Service",
-          "telephone": "+1-407-405-5790",
-          "url": "https://www.simplescreenservice.com/"
-        },
-        "areaServed": {
-          "@type": "Place",
-          "name": "Central Florida"
-        },
-        "description": "Structural aluminum repair for frames, beams, and storm damage restoration in Central Florida."
-      }
-    ]
-  }
-  </script>
+ <!-- ✅ Services Structured Data (Fixed) -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
 
-  <!-- ✅ Review & Rating Structured Data for Services -->
-  <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Service",
-        "name": "Screen Enclosure Repair",
-        "provider": {
-          "@type": "HomeAndConstructionBusiness",
-          "name": "Simple Screen Service",
-          "telephone": "+1-407-405-5790",
-          "url": "https://www.simplescreenservice.com/"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "5"
-        }
-      },
-      {
-        "@type": "Service",
-        "name": "Patio Screen Installation & Repair",
-        "provider": {
-          "@type": "HomeAndConstructionBusiness",
-          "name": "Simple Screen Service",
-          "telephone": "+1-407-405-5790",
-          "url": "https://www.simplescreenservice.com/"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "5"
-        }
-      },
-      {
-        "@type": "Service",
-        "name": "Pool Cage Re-Screening",
-        "provider": {
-          "@type": "HomeAndConstructionBusiness",
-          "name": "Simple Screen Service",
-          "telephone": "+1-407-405-5790",
-          "url": "https://www.simplescreenservice.com/"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "5"
-        }
-      },
-      {
-        "@type": "Service",
-        "name": "Aluminum Structure Repair",
-        "provider": {
-          "@type": "HomeAndConstructionBusiness",
-          "name": "Simple Screen Service",
-          "telephone": "+1-407-405-5790",
-          "url": "https://www.simplescreenservice.com/"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "5"
-        }
-      }
-    ]
+   "@type": "HomeAndConstructionBusiness",
+   "@id": "https://www.simplescreenservice.com/#business",
+   "name": "Simple Screen Service",
+   "url": "https://www.simplescreenservice.com/",
+   "telephone": "+1-407-405-5790",
+   "priceRange": "$$",
+   "address": {
+     "@type": "PostalAddress",
+     "addressLocality": "St. Cloud",
+     "addressRegion": "FL",
+     "postalCode": "34772",
+     "addressCountry": "US"
+   },
+   "aggregateRating": {
+     "@type": "AggregateRating",
+     "ratingValue": "4.9",
+     "reviewCount": "5"
+   }
+  },
+
+  {
+   "@type": "Service",
+   "serviceType": "Screen Enclosure Repair",
+   "provider": {
+     "@id": "https://www.simplescreenservice.com/#business"
+   },
+   "areaServed": {
+     "@type": "Place",
+     "name": "Central Florida"
+   },
+   "description": "Professional screen enclosure repair in Orlando, Clermont, Winter Park, Windermere, Winter Garden and surrounding Central Florida areas."
+  },
+
+  {
+   "@type": "Service",
+   "serviceType": "Patio Screen Installation & Repair",
+   "provider": {
+     "@id": "https://www.simplescreenservice.com/#business"
+   },
+   "areaServed": {
+     "@type": "Place",
+     "name": "Central Florida"
+   },
+   "description": "Luxury patio screen installation and repair for bug-free outdoor spaces across Central Florida."
+  },
+
+  {
+   "@type": "Service",
+   "serviceType": "Pool Cage Re-Screening",
+   "provider": {
+     "@id": "https://www.simplescreenservice.com/#business"
+   },
+   "areaServed": {
+     "@type": "Place",
+     "name": "Central Florida"
+   },
+   "description": "Complete pool cage re-screening services restoring safety, appearance, and visibility across Central Florida."
+  },
+
+  {
+   "@type": "Service",
+   "serviceType": "Aluminum Structure Repair",
+   "provider": {
+     "@id": "https://www.simplescreenservice.com/#business"
+   },
+   "areaServed": {
+     "@type": "Place",
+     "name": "Central Florida"
+   },
+   "description": "Aluminum enclosure structure repair including frame restoration and storm damage repair across Central Florida."
   }
-  </script>
+
+ ]
+}
+</script>
 
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
