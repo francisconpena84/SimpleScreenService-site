@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.simplescreenservice.com/sitemap.xml
+
+# Optional: Block sensitive or unused files
+Disallow: /assets/temp/
+Disallow: /cgi-bin/
