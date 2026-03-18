@@ -85,7 +85,7 @@ if (form && formMessage) {
   });
 }
 // =============================
-// MOBILE NAV TOGGLE (HAMBURGER)
+// MOBILE NAV TOGGLE
 // =============================
 
 const navToggle = document.querySelector('.nav-toggle');
@@ -97,7 +97,7 @@ if (navToggle && mobileNav) {
     mobileNav.classList.toggle('open');
   });
 
-  // Close menu when link clicked
+  // Close menu when clicking a link
   mobileNav.querySelectorAll('a').forEach(function(link){
     link.addEventListener('click', function(){
       mobileNav.classList.remove('open');
