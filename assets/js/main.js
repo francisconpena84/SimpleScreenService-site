@@ -84,22 +84,62 @@ if (form && formMessage) {
       });
   });
 }
-
 // =============================
 // MOBILE NAV TOGGLE (HAMBURGER)
 // =============================
+
 const navToggle = document.querySelector('.nav-toggle');
 const mobileNav = document.querySelector('.mobile-nav');
 
 if (navToggle && mobileNav) {
+
   navToggle.addEventListener('click', function () {
     mobileNav.classList.toggle('open');
   });
 
-  // Close menu when a mobile link is clicked
-  mobileNav.querySelectorAll('a').forEach(function (link) {
-    link.addEventListener('click', function () {
+  // Close menu when link clicked
+  mobileNav.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
       mobileNav.classList.remove('open');
     });
   });
+
 }
+
+
+// =============================
+// BEFORE / AFTER SLIDER
+// =============================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const slider = document.getElementById("beforeAfterSlider");
+  if (!slider) return;
+
+  const afterImg = slider.querySelector(".after-img");
+  const divider = slider.querySelector(".divider");
+  const handle = slider.querySelector(".handle");
+
+  function updateSlider(x) {
+    const rect = slider.getBoundingClientRect();
+    let pos = x - rect.left;
+
+    if (pos < 0) pos = 0;
+    if (pos > rect.width) pos = rect.width;
+
+    const percent = (pos / rect.width) * 100;
+
+    afterImg.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+    divider.style.left = percent + "%";
+    handle.style.left = percent + "%";
+  }
+
+  // Desktop mouse
+  slider.addEventListener("mousemove", (e) => updateSlider(e.clientX));
+  slider.addEventListener("mousedown", (e) => updateSlider(e.clientX));
+
+  // Mobile touch
+  slider.addEventListener("touchstart", (e) => updateSlider(e.touches[0].clientX));
+  slider.addEventListener("touchmove", (e) => updateSlider(e.touches[0].clientX));
+
+});
