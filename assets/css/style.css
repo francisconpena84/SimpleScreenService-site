@@ -1490,3 +1490,11 @@ a:hover {
   margin:4px auto 0;
   opacity:0.85;
 }
+.footer-dev a img{
+  transition:all .3s ease;
+}
+
+.footer-dev a:hover img{
+  opacity:1;
+  transform:scale(1.05);
+}
