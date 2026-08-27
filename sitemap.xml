@@ -4,65 +4,74 @@
 
   <url>
     <loc>https://www.simplescreenservice.com/</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+
+  <!-- Service pages -->
+  <url>
+    <loc>https://www.simplescreenservice.com/services/pool-screen-enclosures.html</loc>
+    <lastmod>2026-08-27</lastmod>
   </url>
 
   <url>
+    <loc>https://www.simplescreenservice.com/services/patio-lanai-enclosures.html</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.simplescreenservice.com/services/screen-repair.html</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.simplescreenservice.com/services/aluminum-structure-repair.html</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+
+  <!-- City pages -->
+  <url>
     <loc>https://www.simplescreenservice.com/cities/screen-repair-orlando.html</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-08-27</lastmod>
   </url>
 
   <url>
     <loc>https://www.simplescreenservice.com/cities/screen-repair-kissimmee.html</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-08-27</lastmod>
   </url>
 
   <url>
     <loc>https://www.simplescreenservice.com/cities/screen-repair-clermont.html</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-08-27</lastmod>
   </url>
 
   <url>
     <loc>https://www.simplescreenservice.com/cities/screen-repair-winter-garden.html</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-08-27</lastmod>
   </url>
 
   <url>
     <loc>https://www.simplescreenservice.com/cities/screen-repair-windermere.html</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-08-27</lastmod>
   </url>
 
   <url>
     <loc>https://www.simplescreenservice.com/cities/screen-repair-st-cloud.html</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.simplescreenservice.com/cities/screen-repair-lake-nona.html</loc>
+    <lastmod>2026-08-27</lastmod>
   </url>
 
   <url>
     <loc>https://www.simplescreenservice.com/cities/screen-repair-davenport.html</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-08-27</lastmod>
   </url>
 
   <url>
     <loc>https://www.simplescreenservice.com/cities/screen-repair-celebration.html</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-08-27</lastmod>
   </url>
 
 </urlset>
