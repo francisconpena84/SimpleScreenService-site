@@ -95,15 +95,27 @@ if (navToggle && mobileNav) {
 
   navToggle.addEventListener('click', function () {
     mobileNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', mobileNav.classList.contains('open') ? 'true' : 'false');
   });
 
   // Close menu when clicking a link
   mobileNav.querySelectorAll('a').forEach(function(link){
     link.addEventListener('click', function(){
       mobileNav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
     });
   });
 
+}
+
+// =============================
+// PREMIUM HEADER SCROLL STATE
+// =============================
+const siteHeader = document.getElementById('site-header');
+if (siteHeader) {
+  const updateHeader = () => siteHeader.classList.toggle('is-scrolled', window.scrollY > 24);
+  updateHeader();
+  window.addEventListener('scroll', updateHeader, { passive: true });
 }
 
 
@@ -142,4 +154,125 @@ document.addEventListener("DOMContentLoaded", function () {
   slider.addEventListener("touchstart", (e) => updateSlider(e.touches[0].clientX));
   slider.addEventListener("touchmove", (e) => updateSlider(e.touches[0].clientX));
 
+});
+
+// ========================================
+// HOMEPAGE SMOOTH SCROLL REVEAL
+// ========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+  const homePage = document.querySelector(".home-page");
+
+  // Run only on the homepage
+  if (!homePage) return;
+
+  // Main sections and content groups
+  const standardRevealSelectors = [
+    ".trust-ribbon",
+    ".premium-intro__grid",
+    ".section-heading",
+    ".result-grid",
+    ".process-intro",
+    ".premium-about",
+    ".service-area-grid",
+    ".contact-grid",
+    ".premium-footer__areas"
+  ];
+
+  standardRevealSelectors.forEach(function (selector) {
+    document.querySelectorAll(selector).forEach(function (element) {
+      element.classList.add("reveal-on-scroll");
+    });
+  });
+
+  // Service cards with staggered timing
+  const serviceCards = document.querySelectorAll(
+    ".service-card-v2, .premium-service-card"
+  );
+
+  serviceCards.forEach(function (card, index) {
+    card.classList.add("reveal-on-scroll");
+
+    card.style.setProperty(
+      "--reveal-delay",
+      `${(index % 4) * 100}ms`
+    );
+  });
+
+  // Gallery images with staggered timing
+  const galleryItems = document.querySelectorAll(
+    ".gallery-grid figure"
+  );
+
+  galleryItems.forEach(function (item, index) {
+    item.classList.add("reveal-on-scroll", "reveal-scale");
+
+    item.style.setProperty(
+      "--reveal-delay",
+      `${index * 110}ms`
+    );
+  });
+
+  // Process steps
+  const processSteps = document.querySelectorAll(
+    ".process-list li"
+  );
+
+  processSteps.forEach(function (step, index) {
+    step.classList.add("reveal-on-scroll");
+
+    step.style.setProperty(
+      "--reveal-delay",
+      `${index * 90}ms`
+    );
+  });
+
+  // Trust ribbon items
+  const trustItems = document.querySelectorAll(
+    ".trust-ribbon__item"
+  );
+
+  trustItems.forEach(function (item, index) {
+    item.classList.add("reveal-on-scroll");
+
+    item.style.setProperty(
+      "--reveal-delay",
+      `${index * 80}ms`
+    );
+  });
+
+  // Browser accessibility preference
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (reduceMotion) {
+    document.querySelectorAll(".reveal-on-scroll").forEach(function (element) {
+      element.classList.add("is-visible");
+    });
+
+    return;
+  }
+
+  // Reveal elements when they enter the screen
+  const revealObserver = new IntersectionObserver(
+    function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+
+          // Animate only once
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.12,
+      rootMargin: "0px 0px -60px 0px"
+    }
+  );
+
+  document.querySelectorAll(".reveal-on-scroll").forEach(function (element) {
+    revealObserver.observe(element);
+  });
 });
