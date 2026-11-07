@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-KRMJL8H2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple Estimate Calculator | Screen Repair Cost | Central Florida</title>
+  <meta name="description" content="Estimate the cost of pool cage, patio and lanai screen repair in Central Florida. Enter panel quantities and request a final written estimate.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.simplescreenservice.com/estimate-calculator.html">
+  <link rel="icon" type="image/png" href="assets/icons/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/css/service-premium.css">
+  <link rel="stylesheet" href="assets/css/calculator.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Screen Repair Cost Calculator | Simple Screen Service">
+  <meta property="og:description" content="Build a preliminary planning range for your Central Florida screen repair project.">
+  <meta property="og:url" content="https://www.simplescreenservice.com/estimate-calculator.html">
+  <meta property="og:image" content="https://www.simplescreenservice.com/assets/images/screen-repair1.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Simple Screen Service Repair Cost Calculator",
+    "url": "https://www.simplescreenservice.com/estimate-calculator.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any",
+    "description": "A preliminary cost-range calculator for screen enclosure repairs in Central Florida.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "provider": {
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Simple Screen Service",
+      "telephone": "+1-407-405-5790",
+      "url": "https://www.simplescreenservice.com/"
+    }
+  }
+  </script>
+</head>
+
+<body class="service-page calculator-page">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="header-logo">
+        <a href="/" aria-label="Simple Screen Service home">
+          <img src="assets/images/logo.png" alt="Simple Screen Service logo">
+        </a>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/#services" class="nav-link">Services</a>
+        <a href="/#projects" class="nav-link">Portfolio</a>
+        <a href="/#about" class="nav-link">About Us</a>
+        <a href="/estimate-calculator.html" class="nav-link active">Calculator</a>
+        <a href="/#contact" class="nav-link nav-cta">Get a Free Quote</a>
+      </nav>
+
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </div>
+
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/#services" class="nav-link">Services</a>
+      <a href="/#projects" class="nav-link">Portfolio</a>
+      <a href="/#about" class="nav-link">About</a>
+      <a href="/warranty.html" class="nav-link">3-Year Warranty</a>
+      <a href="/#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="calculator-hero">
+      <div class="calculator-shell calculator-hero__grid">
+        <div>
+          <p class="calculator-eyebrow">Plan your screen repair</p>
+          <h1>Simple Estimate Calculator.</h1>
+          <p class="calculator-hero__lead">
+            Enter the panels you need repaired to receive an immediate preliminary
+            planning range. Then send the project details to our team for a final
+            written estimate.
+          </p>
+        </div>
+
+        <aside class="calculator-hero__note">
+          <strong>Planning estimate only</strong>
+          <p>
+            Final pricing depends on measurements, enclosure height, access,
+            existing conditions, selected materials and an on-site or photo review.
+            Applicable sales tax is not included.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="calculator-section">
+      <div class="calculator-shell">
+        <div class="calculator-intro">
+          <p class="calculator-eyebrow">Online estimator</p>
+          <h2>Tell us what needs attention.</h2>
+          <p>
+            Count each damaged opening as one panel. If you are unsure, upload
+            photographs and our team will help confirm the scope.
+          </p>
+        </div>
+
+        <form
+          id="repair-calculator-form"
+          class="calculator-form"
+          action="https://formspree.io/f/xjgeenbr"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <input type="hidden" name="_subject" value="New online screen repair estimate">
+          <input type="hidden" name="request_type" value="Online repair calculator">
+          <input type="hidden" id="calculated-subtotal" name="calculated_subtotal">
+          <input type="hidden" id="calculated-range" name="calculated_range">
+
+          <div class="calculator-fields">
+            <section class="calculator-block">
+              <div class="calculator-block__heading">
+                <span class="calculator-step">Step 1</span>
+                <h2>Project type</h2>
+                <p>Select the enclosure that best matches your project.</p>
+              </div>
+
+              <div class="calculator-choice-grid">
+                <label class="calculator-choice">
+                  <input type="radio" name="enclosure_type" value="Pool cage" required>
+                  <span>
+                    <svg viewBox="0 0 140 82" aria-hidden="true">
+                      <path d="M12 69V28L49 8l78 13v48M12 28l93 8 22-15M105 36v33M49 8l18 23M12 69h115"/>
+                      <path d="M39 30v39M68 33v36M87 34v35"/>
+                    </svg>
+                    <b>Pool cage</b>
+                    <small>Full pool enclosure</small>
+                  </span>
+                </label>
+                <label class="calculator-choice">
+                  <input type="radio" name="enclosure_type" value="Patio or lanai">
+                  <span>
+                    <svg viewBox="0 0 140 82" aria-hidden="true">
+                      <path d="M12 69V24h116v45M12 24L31 9h96l1 15M12 69h116M42 24v45M74 24v45M105 24v45"/>
+                      <path d="M31 9v15"/>
+                    </svg>
+                    <b>Patio or lanai</b>
+                    <small>Single-height enclosure</small>
+                  </span>
+                </label>
+                <label class="calculator-choice">
+                  <input type="radio" name="enclosure_type" value="Other screen enclosure">
+                  <span>
+                    <svg viewBox="0 0 140 82" aria-hidden="true">
+                      <path d="M19 69V30L45 12h77v57M19 30h103M19 69h103M50 30v39M84 30v39"/>
+                      <path d="M45 12v18M105 30v39"/>
+                    </svg>
+                    <b>Other enclosure</b>
+                    <small>Entry, porch or custom</small>
+                  </span>
+                </label>
+              </div>
+            </section>
+
+            <section class="calculator-block">
+              <div class="calculator-block__heading">
+                <span class="calculator-step">Step 2</span>
+                <h2>Repair quantities</h2>
+                <p>Enter zero for any panel type you do not need.</p>
+              </div>
+
+              <figure class="calculator-panel-guide">
+                <img src="assets/images/screen-panel-guide.svg" alt="Illustrated screen enclosure showing roof, upper wall, lower wall, screen door and Florida Glass panels">
+                <figcaption>
+                  <strong>Not sure what to count?</strong>
+                  Use this guide to identify each damaged opening. One opening equals one panel.
+                </figcaption>
+              </figure>
+
+              <div class="calculator-grid">
+                <div class="calculator-field">
+                  <label for="lower-panels">Standard/lower wall panels</label>
+                  <input type="number" id="lower-panels" name="lower_wall_panels" value="0" min="0" max="100" inputmode="numeric">
+                  <small>Standard wall-sized openings.</small>
+                </div>
+
+                <div class="calculator-field">
+                  <label for="upper-panels">Large/upper wall panels</label>
+                  <input type="number" id="upper-panels" name="large_upper_panels" value="0" min="0" max="100" inputmode="numeric">
+                  <small>Taller or oversized wall openings.</small>
+                </div>
+
+                <div class="calculator-field">
+                  <label for="roof-panels">Roof/top panels</label>
+                  <input type="number" id="roof-panels" name="roof_top_panels" value="0" min="0" max="100" inputmode="numeric">
+                  <small>Overhead enclosure panels.</small>
+                </div>
+
+                <div class="calculator-field">
+                  <label for="screen-doors">Screen doors</label>
+                  <input type="number" id="screen-doors" name="screen_doors" value="0" min="0" max="20" inputmode="numeric">
+                  <small>Door re-screening only.</small>
+                </div>
+
+                <div class="calculator-field">
+                  <label for="florida-glass-panels">Florida Glass panels</label>
+                  <input type="number" id="florida-glass-panels" name="florida_glass_panels" value="0" min="0" max="100" inputmode="numeric">
+                  <small>Privacy or lower splash-barrier panels.</small>
+                </div>
+
+                <div class="calculator-field">
+                  <label for="no-see-um-panels">No-See-Um upgrades</label>
+                  <input type="number" id="no-see-um-panels" name="no_see_um_upgrade_panels" value="0" min="0" max="100" inputmode="numeric">
+                  <small>Enter how many counted panels receive this upgrade.</small>
+                </div>
+
+                <div class="calculator-field">
+                  <label for="pet-screen-panels">Pet screen upgrades</label>
+                  <input type="number" id="pet-screen-panels" name="pet_screen_upgrade_panels" value="0" min="0" max="100" inputmode="numeric">
+                  <small>Enter how many counted panels receive this upgrade.</small>
+                </div>
+              </div>
+            </section>
+
+            <section class="calculator-block">
+              <div class="calculator-block__heading">
+                <span class="calculator-step">Step 3</span>
+                <h2>Travel and project details</h2>
+                <p>A $25 travel allowance is added when the property is more than 35 miles from our service base.</p>
+              </div>
+
+              <div class="calculator-field calculator-field--full">
+                <span>Is the property more than 35 miles away?</span>
+                <div class="calculator-choice-grid">
+                  <label class="calculator-choice">
+                    <input type="radio" name="travel_distance" value="Within 35 miles" checked>
+                    <span>Within 35 miles</span>
+                  </label>
+                  <label class="calculator-choice">
+                    <input type="radio" name="travel_distance" value="More than 35 miles">
+                    <span>More than 35 miles</span>
+                  </label>
+                  <label class="calculator-choice">
+                    <input type="radio" name="travel_distance" value="Not sure">
+                    <span>Not sure</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="calculator-grid" style="margin-top: 18px;">
+                <div class="calculator-field calculator-field--full">
+                  <label for="project-comments">Additional project details</label>
+                  <textarea id="project-comments" name="project_comments" placeholder="Describe the damaged panels, enclosure height, access concerns or anything else we should know."></textarea>
+                </div>
+
+                <div class="calculator-field calculator-field--full">
+                  <label for="project-photos">Project photographs</label>
+                  <input type="file" id="project-photos" name="project_photos" accept="image/*" multiple>
+                  <small>Optional. Clear wide and close-up photographs help us confirm the scope.</small>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <aside class="calculator-sidebar">
+            <section class="calculator-result" aria-live="polite">
+              <div class="calculator-result__top">
+                <span>Preliminary planning range</span>
+                <strong class="calculator-result__amount" id="calculator-result-amount">$125 – $150</strong>
+              </div>
+              <div class="calculator-result__body">
+                <ul class="calculator-result__list" id="calculator-result-list">
+                  <li><span>Minimum service charge</span><strong>$125</strong></li>
+                </ul>
+                <p class="calculator-disclaimer">
+                  This is not a contract or final quote. The range includes a planning
+                  allowance for normal size and access variations. Applicable sales tax
+                  is not included. A written estimate follows project review.
+                </p>
+              </div>
+            </section>
+
+            <section class="calculator-contact">
+              <div>
+                <span class="calculator-step">Step 4</span>
+                <h2>Send your project</h2>
+                <p>We’ll review the scope and contact you to confirm the final written estimate.</p>
+              </div>
+
+              <div class="calculator-grid">
+                <div class="calculator-field">
+                  <label for="calculator-name">Full name</label>
+                  <input type="text" id="calculator-name" name="name" autocomplete="name" required>
+                </div>
+
+                <div class="calculator-field">
+                  <label for="calculator-phone">Phone number</label>
+                  <input type="tel" id="calculator-phone" name="phone" autocomplete="tel" required>
+                </div>
+
+                <div class="calculator-field">
+                  <label for="calculator-email">Email address</label>
+                  <input type="email" id="calculator-email" name="email" autocomplete="email" required>
+                </div>
+
+                <div class="calculator-field">
+                  <label for="calculator-address">Property address</label>
+                  <input type="text" id="calculator-address" name="property_address" autocomplete="street-address" required>
+                </div>
+
+                <div class="calculator-field">
+                  <label for="calculator-city">City</label>
+                  <input type="text" id="calculator-city" name="city" autocomplete="address-level2" required>
+                </div>
+
+                <div class="calculator-field">
+                  <label for="calculator-zip">ZIP code</label>
+                  <input type="text" id="calculator-zip" name="zip_code" autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" required>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary calculator-submit">Send My Estimate Request</button>
+              <div id="calculator-form-message" class="calculator-form__message" role="status" aria-live="polite"></div>
+            </section>
+          </aside>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-column footer-brand">
+        <img src="assets/images/logo.png" alt="Simple Screen Service logo" class="footer-logo">
+        <p>Professional screen enclosure repair, patio screen installation, pool cage re-screening, and aluminum structure repair across Central Florida.</p>
+        <p class="footer-phone">Call us: <a href="tel:+14074055790">(407) 405-5790</a></p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/#projects">Portfolio</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/estimate-calculator.html">Repair Calculator</a></li>
+          <li><a href="/warranty.html">3-Year Warranty</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Service Areas</h4>
+        <ul>
+          <li><a href="/cities/screen-repair-orlando.html">Orlando</a></li>
+          <li><a href="/cities/screen-repair-kissimmee.html">Kissimmee</a></li>
+          <li><a href="/cities/screen-repair-clermont.html">Clermont</a></li>
+          <li><a href="/cities/screen-repair-winter-garden.html">Winter Garden</a></li>
+          <li><a href="/cities/screen-repair-windermere.html">Windermere</a></li>
+          <li><a href="/cities/screen-repair-st-cloud.html">St. Cloud</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Simple Screen Service · Screen Enclosure Repair · Central Florida</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/calculator.js"></script>
+</body>
+</html>

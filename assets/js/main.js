@@ -92,6 +92,66 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // =============================
+  // WARRANTY CLAIM SUBMISSION
+  // =============================
+  const warrantyForm = document.getElementById("warranty-claim-form");
+  const warrantyFormMessage = document.getElementById("warranty-form-message");
+
+  if (warrantyForm && warrantyFormMessage) {
+    const warrantySubmitButton = warrantyForm.querySelector('button[type="submit"]');
+    const warrantyButtonText = warrantySubmitButton
+      ? warrantySubmitButton.textContent
+      : "Submit Warranty Claim";
+
+    warrantyForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const warrantyFormData = new FormData(warrantyForm);
+
+      if (warrantySubmitButton) {
+        warrantySubmitButton.disabled = true;
+        warrantySubmitButton.textContent = "Submitting...";
+      }
+
+      warrantyFormMessage.style.display = "block";
+      warrantyFormMessage.style.color = "#555";
+      warrantyFormMessage.textContent = "Submitting your warranty request...";
+
+      fetch(warrantyForm.action, {
+        method: warrantyForm.method,
+        headers: {
+          Accept: "application/json"
+        },
+        body: warrantyFormData
+      })
+        .then(function (response) {
+          if (response.ok) {
+            warrantyFormMessage.style.color = "#17663a";
+            warrantyFormMessage.textContent = "Your warranty request has been submitted. Our team will review the project records and contact you about the next step.";
+            warrantyForm.reset();
+            warrantyFormMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+            return;
+          }
+
+          return response.json().then(function (data) {
+            throw new Error(data.error || "We could not submit the claim. Please try again or call us.");
+          });
+        })
+        .catch(function (error) {
+          warrantyFormMessage.style.color = "#a32626";
+          warrantyFormMessage.textContent = error.message || "We could not submit the claim. Please call (407) 405-5790.";
+          warrantyFormMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+        })
+        .finally(function () {
+          if (warrantySubmitButton) {
+            warrantySubmitButton.disabled = false;
+            warrantySubmitButton.textContent = warrantyButtonText;
+          }
+        });
+    });
+  }
+
+  // =============================
   // MOBILE NAVIGATION
   // =============================
   const navToggle = document.querySelector(".nav-toggle");
