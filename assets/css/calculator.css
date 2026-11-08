@@ -1,5 +1,12 @@
 .calculator-page {
   background: var(--paper);
+  overflow-x: hidden;
+}
+
+.calculator-page *,
+.calculator-page *::before,
+.calculator-page *::after {
+  box-sizing: border-box;
 }
 
 .calculator-page .calculator-hero {
@@ -96,8 +103,16 @@
 .calculator-page .calculator-fields,
 .calculator-page .calculator-result,
 .calculator-page .calculator-contact {
+  min-width: 0;
   border: 1px solid var(--line);
   background: #fff;
+}
+
+.calculator-page .calculator-block,
+.calculator-page .calculator-grid,
+.calculator-page .calculator-field,
+.calculator-page .calculator-sidebar {
+  min-width: 0;
 }
 
 .calculator-page .calculator-fields,
@@ -169,6 +184,8 @@
 .calculator-page .calculator-field select,
 .calculator-page .calculator-field textarea {
   width: 100%;
+  min-width: 0;
+  max-width: 100%;
   min-height: 50px;
   padding: 12px 14px;
   border: 1px solid rgba(16, 24, 23, 0.2);
@@ -342,6 +359,11 @@
   font-size: 0.82rem;
 }
 
+.calculator-page .calculator-result__list li span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 .calculator-page .calculator-result__list strong {
   color: var(--forest);
 }
@@ -407,6 +429,10 @@
     padding: 24px 18px;
   }
 
+  .calculator-page .calculator-section {
+    padding: 64px 0 80px;
+  }
+
   .calculator-page .calculator-grid,
   .calculator-page .calculator-choice-grid {
     grid-template-columns: 1fr;
@@ -417,11 +443,40 @@
   }
 
   .calculator-page .calculator-panel-guide {
-    overflow-x: auto;
+    overflow: hidden;
   }
 
   .calculator-page .calculator-panel-guide img,
   .calculator-page .calculator-panel-guide figcaption {
-    min-width: 650px;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .calculator-page .calculator-panel-guide figcaption {
+    display: block;
+  }
+
+  .calculator-page .calculator-panel-guide figcaption strong {
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  .calculator-page .calculator-field input[type="file"] {
+    overflow: hidden;
+    font-size: 0.72rem;
+  }
+
+  .calculator-page .calculator-result__top,
+  .calculator-page .calculator-result__body {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .calculator-page .calculator-result__amount {
+    font-size: clamp(1.8rem, 10vw, 2.6rem);
+  }
+
+  .calculator-page .calculator-result__list li {
+    align-items: flex-start;
   }
 }
